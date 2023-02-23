@@ -6,7 +6,7 @@ Close all VS Code windows. Start VS Code again
 
 Go to your React-folder, e.g
 
-    cd C:\Brights\My\Frontend\React
+    cd C:\Brights\My\React
 
 Write this command to install a React project in the folder (this will take some minutes)
 
