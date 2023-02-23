@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
+import './custom.css'
+
 import Email from './email/Email'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,12 +13,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <h1>Hej hej</h1>
+    <div className="container mt-3">
 
-    <Email />
-    <Email />
+      <Email />
+      <Email />
 
-    <p>Lite text</p>
+    </div>
 
   </React.StrictMode>
 );
