@@ -4,11 +4,10 @@ import { useState } from "react"
 
 function Email() {
 
-    const [input, setInput] = useState("oo@happybits.se")
-    const [inputAgain, setInputAgain] = useState("oo@happybits.se")
+    const [input, setInput] = useState("")
+    const [inputAgain, setInputAgain] = useState("")
 
     const changeEmailAddress = () => {
-
         setInput("klas@katt.nu")
     }
     
@@ -18,6 +17,18 @@ function Email() {
     
     const inputAgainChanged = (event)=> {
         setInputAgain(event.target.value)
+    }
+
+    const compareText = () => {
+
+        // Om input är samma som inputAgain, då vill jag returnera "Same", annars "Not the same"
+
+        if (input === inputAgain){
+            return "Same"
+        } else {
+            return "Not the same"
+        }
+
     }
 
     return (
@@ -48,6 +59,11 @@ function Email() {
                 </div>
 
                 <button onClick={changeEmailAddress} className="btn btn-primary btn-lg me-1">Ok1</button>
+
+                <div className="alert alert-primary mt-3">
+                    <div>{compareText()}</div>
+                    <div>{input === inputAgain ? "Same!" : "Not the same!"}</div>
+                </div>
 
             </article>
 
