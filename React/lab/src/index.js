@@ -16,6 +16,7 @@ root.render(
     <div className="container mt-3">
 
       <Email />
+
       <Email />
 
     </div>
@@ -24,3 +25,4 @@ root.render(
 );
 
 
+{/*  <Email success-message="Good work!" background="cornsilk"  border-thickness={10} />  */ }
