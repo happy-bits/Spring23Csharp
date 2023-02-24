@@ -9,14 +9,14 @@ import defaultPoster from './posters/default.png'
 import starGray from './stars/star-gray.png'
 import star from './stars/star.png'
 
-function Movie(param) {
+function Movie(props) {
 
     const [chosenStars, setChosenStars] = useState(0)
     const [hoveredStar, setHoveredStar] = useState(null)
 
-    const maxstars = param.maxstars ?? 5
-    const title = param.title ?? "<No name>"
-    const poster = param.poster ?? defaultPoster
+    const maxstars = props.maxstars ?? 5
+    const title = props.title ?? "<No name>"
+    const poster = props.poster ?? defaultPoster
 
     const clickStar = (number)=>{
         setChosenStars(number)
@@ -47,6 +47,16 @@ function Movie(param) {
         }
     }
 
+    const oneToMaxStars = () => {
+
+        let x=[]
+        for(let i=1; i<=maxstars; i++) {
+            x.push(i)
+        }
+        return x
+
+    }
+
     return (
 
         <article className="box movie">
@@ -59,8 +69,8 @@ function Movie(param) {
 
             <div className="text-center">
                 
-                {[1, 2, 3, 4, 5].map(n=>
-                    <img key={n} src={selectStarImageFor(n)} onClick={() => clickStar(n)} onMouseEnter={() => hoverStar(n)} onMouseOut={() => leftStar()} className='movie__star' />
+                {[...Array(maxstars).keys()].map(n=>
+                    <img key={n+1} src={selectStarImageFor(n+1)} onClick={() => clickStar(n+1)} onMouseEnter={() => hoverStar(n+1)} onMouseOut={() => leftStar()} className='movie__star' />
                 )}
 
             </div>
