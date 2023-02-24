@@ -27,6 +27,9 @@ function Movie() {
     }
 
     const selectStarImageFor = (number)=>{
+
+        // todo: write some logic here
+
         if (chosenStars >= number){
             return star
         } else {
