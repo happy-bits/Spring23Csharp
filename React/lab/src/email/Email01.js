@@ -3,7 +3,7 @@ A static HTML page
 
 Copy the HTML-code from you Bootstrap 
 
-Change "className" to "classNameName"
+Change "class" to "className"
 Change "for" to "htmlFor"
 
 Note that React is more senitive about the HTML-code (it has to be lowercase and you must close all tags)

@@ -11,7 +11,7 @@ function Email() {
     const [inputAgain, setInputAgain] = useState("")
 
     const inputChange = (event) => {
-
+        
         setInput(event.target.value)
     }
 
@@ -40,7 +40,7 @@ function Email() {
                 <input type="email" value={input} onChange={inputChange} className="form-control" id="emailInput" placeholder="name@example.com" />
             </div>
 
-            <div class="alert alert-primary" role="alert">
+            <div className="alert alert-primary" role="alert">
                 {input}
             </div>
 
@@ -49,13 +49,13 @@ function Email() {
                 <input type="email" value={inputAgain} onChange={inputAgainChange} className="form-control" id="emailAgainInput" placeholder="name@example.com" />
             </div>
 
-            <div class="alert alert-primary" role="alert">
+            <div className="alert alert-primary" role="alert">
                 {inputAgain}
             </div>
 
             <button className="btn btn-primary btn-lg">Ok</button>
 
-            <div class="alert alert-primary mt-3" role="alert">
+            <div className="alert alert-primary mt-3" role="alert">
                 <div>{compareTexts()}</div>
                 <div>{input === inputAgain ? "Same" : "Not the same"}</div>
             </div>
