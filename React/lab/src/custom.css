@@ -3,10 +3,10 @@
 body {
 
     background-color: rgb(243, 243, 243);
-}    
+}
 
 /* alla element med klassen "box*/
-.box{
+.box {
     padding: 30px;
     background-color: white;
 
@@ -18,9 +18,12 @@ body {
 }
 
 .movie__star {
-    /* todo write some code */ /*2 rader CSS kod*/
+    width: 50px;
+    padding: 0.2rem;
 }
 
 .movie__info {
-    /* todo write some code */ /*3 rader CSS kod*/
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1.5rem;
 }
